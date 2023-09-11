@@ -4,6 +4,7 @@ import React from "react";
 import LoginForm from "./Form/Login";
 import RegistrationForm from "./Form/RegistrationForm";
 import LoginLayout from "./Form/LoginLayout/LoginLayout";
+import Home from "./Form/components/Home";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<RegistrationForm />} />
           <Route path="login" element={<LoginForm />} />
         </Route>
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

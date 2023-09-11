@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom";
 
 function SignInForm() {
   const [formData, setFormData] = useState({
@@ -17,14 +17,28 @@ function SignInForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate and submit the sign-in data here
-    console.log("Sign In submitted:", formData);
-    // You can implement authentication logic here
+    // Temporary hardcoded user credentials for testing
+    const tempUser = {
+      email: "user@gmail.com",
+      password: "123",
+    };
+
+    // Check if the input matches the hardcoded credentials
+    if (
+      formData.email === tempUser.email &&
+      formData.password === tempUser.password
+    ) {
+      console.log("Sign In successful:", formData);
+      // Use the Link component to navigate to the home page
+      window.location.href = "/home"; // Redirect to the home page
+    } else {
+      alert("Invalid email or password.");
+    }
   };
 
   return (
-    <div className="bg-purple w-1/2 h-screen flex flex-col justify-center items-center ">
-      <h1 className="text-3xl text-white font-bold mb-8 font-dancing">
+    <div className="bg-purple w-full lg:w-1/2 h-screen flex flex-col justify-center items-center">
+      <h1 className="text-2xl lg:text-3xl text-white font-bold mb-4 lg:mb-8 font-dancing">
         Sign in to your account
       </h1>
       <form className="w-1/2" onSubmit={handleSubmit}>
@@ -67,10 +81,10 @@ function SignInForm() {
             Sign In
           </button>
           <Link
-            to="/"
+            to="/home" // Change this to your home route
             className="bg-indigo text-sky-300 px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
-            Sign Up
+            Home
           </Link>
         </div>
       </form>

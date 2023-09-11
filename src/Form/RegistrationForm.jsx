@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import React Router
+import { Link } from "react-router-dom";
 
 function SignUpForm() {
   const [formData, setFormData] = useState({
@@ -21,18 +21,16 @@ function SignUpForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate a successful form submission (replace this with your actual logic)
     if (formData.password === formData.confirmPassword) {
       console.log("Form submitted:", formData);
-      // Redirect to the login form upon successful submission
-      history.push("/login"); // Redirect to the "/login" route
+      // Use the Link component to navigate to the login page
     } else {
       alert("Passwords do not match.");
     }
   };
 
   return (
-    <div className="bg-purple w-1/2 h-screen flex flex-col justify-center items-center pb-12 pr-32">
+    <div className="bg-purple w-full lg:w-1/2 h-screen flex flex-col justify-center items-center">
       <h1 className="text-2xl text-white font-bold mb-8 font-dancing">
         Create your account
       </h1>
