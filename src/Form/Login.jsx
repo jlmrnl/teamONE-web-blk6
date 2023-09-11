@@ -81,10 +81,10 @@ function SignInForm() {
             Sign In
           </button>
           <Link
-            to="/home" // Change this to your home route
+            to="/register" // Change this to your home route
             className="bg-indigo text-sky-300 px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
-            Home
+            Sign up
           </Link>
         </div>
       </form>

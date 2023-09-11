@@ -138,7 +138,7 @@ function SignUpForm() {
             Sign Up
           </button>
           <Link
-            to="/login"
+            to="/"
             className="bg-indigo text-sky-300 px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
             Sign In
