@@ -6,10 +6,10 @@ export default function LoginTitle() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); // Adjust the breakpoint as needed
+      setIsLargeScreen(window.innerWidth >= 1024);
     };
 
-    handleResize(); // Call it once to set the initial value
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 

@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+const initialFormData = {
+  name: "",
+  birthdate: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+  acceptTerms: false,
+};
+
 function SignUpForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    birthdate: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    acceptTerms: false,
-  });
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -19,11 +21,15 @@ function SignUpForm() {
     });
   };
 
+  const resetForm = () => {
+    setFormData(initialFormData);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password === formData.confirmPassword) {
       console.log("Form submitted:", formData);
-      // Use the Link component to navigate to the login page
+      resetForm();
     } else {
       alert("Passwords do not match.");
     }
@@ -31,7 +37,7 @@ function SignUpForm() {
 
   return (
     <div className="bg-purple w-full lg:w-1/2 h-screen flex flex-col justify-center items-center">
-      <h1 className="text-2xl text-white font-bold mb-8 font-dancing">
+      <h1 className="text-3xl lg:text-5xl text-white font-bold mb-4 lg:mb-16 font-dancing">
         Create your account
       </h1>
       <form className="w-1/2" onSubmit={handleSubmit}>
