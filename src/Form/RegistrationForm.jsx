@@ -141,13 +141,13 @@ function SignUpForm() {
             type="submit"
             className="bg-indigo text-sky-300 px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
-            Sign Up
+            Sign up
           </button>
           <Link
             to="/"
             className="bg-indigo text-sky-300 px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
-            Sign In
+            Sign in
           </Link>
         </div>
       </form>

@@ -76,13 +76,13 @@ function SignInForm() {
             type="submit"
             className="bg-indigo text-white px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
-            SIGN IN
+            Sign in
           </button>
           <Link
             to="/register" // Change this to your home route
             className="bg-indigo text-white px-6 py-2 text-lg font-bold rounded hover:bg-opacity-70 mr-4"
           >
-            SIGN UP
+            Sign up
           </Link>
         </div>
       </form>
