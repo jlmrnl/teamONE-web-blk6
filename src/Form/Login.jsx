@@ -18,7 +18,7 @@ function SignInForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const tempUser = {
-      email: "user@gmail.com",
+      email: "admin@gmail.com",
       password: "123",
     };
 
@@ -28,7 +28,7 @@ function SignInForm() {
     ) {
       console.log("Sign In successful:", formData);
 
-      window.location.href = "/home";
+      window.location.href = "/admin";
     } else {
       alert("Invalid email or password.");
     }
