@@ -7,6 +7,7 @@ import LoginLayout from "./Form/LoginLayout/LoginLayout";
 import Home from "./components/Home";
 import AdminLayout from "./AdminLayout/AdminLayout";
 import User from "./components/User";
+import NewsFeed from "./NewsFeed/newsfeed";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
           <Route path="user" element={<User />} />
         </Route>
+        <Route path="newsfeed" element={<NewsFeed />} />
       </Routes>
     </BrowserRouter>
   );

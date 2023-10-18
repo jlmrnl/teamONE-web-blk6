@@ -13,7 +13,7 @@ export default {
         rubik: ["Rubik", "sans"],
       },
       fontFamily: {
-        sans: ["Roboto", "sans"], // Use Roboto as the default sans-serif font
+        sans: ["sans"], // Use Roboto as the default sans-serif font
         dancing: ["Dancing Script", "cursive"], // Use Dancing Script
         montserrat: ["Montserrat", "sans"], // Use Montserrat
         mukta: ["Mukta", "sans"], // Use Mukta

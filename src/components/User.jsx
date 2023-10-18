@@ -1,3 +1,7 @@
 export default function User() {
-  return <div>from user :D</div>;
+  return (
+    <div className="h-screen overflow-x-hidden flex flex-col bg-purple">
+      User
+    </div>
+  );
 }

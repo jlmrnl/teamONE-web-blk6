@@ -47,7 +47,7 @@ export default function Chart() {
 
   return (
     <div style={chartStyles} className="ml-4">
-      <h2 className="text-white pb-4">Most Frequently Lost items</h2>
+      <h2 className="text-white pb-4">Recovery Rates</h2>
       <BarChart width={600} height={400} data={data}>
         <CartesianGrid strokeDasharray="0 " />
         <XAxis dataKey="name" tick={textStyle} />
